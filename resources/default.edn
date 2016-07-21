@@ -1,0 +1,34 @@
+{
+ :status-url               "/status"
+ :health-url               "/health"
+
+ ; metering
+ :metering-reporter        "console"
+ :console-interval-seconds "100"
+
+ ; activate graphite like this:
+ ;:metering-reporter "graphite"
+ ;:graphite-host "localhost"
+ ;:graphite-port "2003"
+ ;:graphite-prefix "my-app-prefix"
+ ;:graphite-interval-seconds "60"
+
+:vision-app-name "contentreich-ecm-vision"
+:vision-credentials-json  "/google-api-key.json"
+:vision-max.results "3"
+:vision-translate-language ""
+:vision-translate-api-key  ""
+
+
+;; # UNKNOWN, VERY_UNLIKELY, UNLIKELY, POSSIBLE, LIKELY, VERY_LIKELY
+:vision-safe-search-adult "LIKELY"
+:vision-safe-search-medical ""
+:vision-safe-search-spoof ""
+:vision-safe-search-violence "POSSIBLE"
+
+ :server-port              "9090"
+
+ ; use this if you need a grace-time during which
+ ; the system reports unhealthy before shutting down.
+ ;:wait-ms-on-stop "10000"
+ }
